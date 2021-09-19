@@ -1,0 +1,12 @@
+spring.cloud.stream:
+  function:
+    definition: eventsProducer;eventsProcessor;eventsConsumer
+  bindings:
+    eventsProducer-out-0:
+      destination: events.new
+    eventsProcessor-in-0:
+      destination: events.new
+    eventsProcessor-out-0:
+      destination: events.filtered
+    eventsConsumer-in-0:
+      destination: events.filtered
