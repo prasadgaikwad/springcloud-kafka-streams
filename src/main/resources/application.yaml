@@ -6,6 +6,7 @@ spring.cloud.stream:
       destination: events.new
     eventsProcessor-in-0:
       destination: events.new
+      consumer.concurrency: 3
     eventsProcessor-out-0:
       destination: events.filtered
     eventsConsumer-in-0:
